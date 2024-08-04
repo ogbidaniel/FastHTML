@@ -1,0 +1,17 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore session keys
+.sesskey
+
+# Ignore other unnecessary files
+*.log
+*.tmp
+.DS_Store
+.env
+.vscode/
+
+# Ignore environment directories
+env/
+venv/
