@@ -1,11 +1,9 @@
 # main.py
+from fasthtml import common as fh
 
-from fasthtml.common import *
-
-app, rt = fast_app()
+app, rt = fh.fast_app(live=True)
 
 @rt('/')
-def get():
-    return Div(P("Web Apping in Python. Let's Go!!!!!!!"), hx_get="/change")
+def get(): return fh.Div(fh.P('Live FastHTML Application!'))
 
-serve()
+fh.serve()
