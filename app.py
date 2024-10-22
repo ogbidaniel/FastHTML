@@ -1,6 +1,6 @@
 from fasthtml.common import *
 
-app = FastHTML()
+app, rt = fast_app(hdrs=[Script(src='https://cdn.tailwindcss.com')])
 
 def nav_bar():
     return Nav(
@@ -34,9 +34,14 @@ def home():
 def about():
     return Title(), Main(
                 nav_bar(),
-                H1('About Me'),
-                P('Hello! I am Daniel Ogbuigwe. I have a background in mechanical engineering and computer science.'),
-                P('I am passionate about web development and enjoy building interactive web applications.'),
+                Card(
+                    H1('About Me'),
+                    ),
+                Card(
+                    P('Hello! I am Daniel Ogbuigwe. I have a background in mechanical engineering and computer science.'),
+                    P('I am passionate about web development and enjoy building interactive web applications.'),
+                )
+                
             )
 
 @app.get("/contact")
@@ -51,5 +56,4 @@ def contact():
                 ),
             )
 
-if __name__ == "__main__":
-    app.run()
+serve()

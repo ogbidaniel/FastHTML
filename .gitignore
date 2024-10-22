@@ -11,6 +11,7 @@ __pycache__/
 .DS_Store
 .env
 .vscode/
+.sample_data.xlsx
 
 # Ignore environment directories
 env/
