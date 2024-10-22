@@ -53,7 +53,7 @@ def post(contact: Contact):
     contacts.insert(contact)
     return contact, reset_name_input(), reset_email_input()
 
-@rt('{/}')
+@rt('/{id}')
 def delete(id:int):
     contacts.delete(id)
 
